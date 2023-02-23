@@ -1,0 +1,7 @@
+# 宿主机映射端口到wsl
+netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=9000 connectaddress=192.168.120.130 connectport=9000
+
+netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=3306 connectaddress=192.168.120.130 connectport=3306
+
+# 取消
+netsh interface portproxy delete v4tov4 listenaddress=0.0.0.0 listenport=3306
